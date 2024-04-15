@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>création d'un compte</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <form action="#" name="formfill" id="registrationForm">
+                <h2>Enregistrement</h2>
+                <div class="input-box">
+                    <ion-icon name="person-circle-outline" class="i"></ion-icon>
+                    <input type="text" name="username" id="username" placeholder="nom et prenom" required>
+                </div>
+                <div class="input-box">
+                    <ion-icon name="mail-outline" class="i"></ion-icon>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="input-box">
+                    <ion-icon name="lock-open-outline" class="i"></ion-icon>
+                    <input type="password" name="password" id="password" placeholder="mots de passe" required>
+                </div>
+                <div class="input-box">
+                    <ion-icon name="lock-open-outline" class="i"></ion-icon>
+                    <input type="password" name="Cpassword" id="confirmPassword" placeholder="comfirmer mots de passe" required>
+                </div>
+                <div class="button"> 
+                    <input type="submit" class="btn" value="enregistrement">
+                </div>
+                <div class="groupe">
+                    <span><a href="#">mots de passe oublier</a></span>
+                    <span><a href="#">se connecter</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (username === '' || email === '' || password === '' || confirmPassword === '') {
+                alert("Veuillez remplir tous les champs.");
+                event.preventDefault();
+            } else if (password !== confirmPassword) {
+                alert("Les mots de passe ne correspondent pas.");
+                event.preventDefault();
+            }
+        });
+    </script>
+    
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

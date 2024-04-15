@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial">
+        <link rel="stylesheet" href="profil.css">
+        <title>Document</title>
+    </head>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.querySelector("form");
+    
+            form.addEventListener("submit", function(event) {
+                event.preventDefault(); // Empêche la soumission du formulaire
+    
+                const email = document.querySelector('input[type="email"]').value;
+                const password = document.querySelector('input[type="password"]').value;
+    
+                console.log("Email:", email);
+                console.log("Password:", password);
+    
+                // Vous pouvez ajouter ici la logique de traitement supplémentaire, comme l'envoi des données à un serveur
+            });
+        });
+    </script>
+    <body>
+       <div class="container">
+        <nav>
+            <img src="téléchargé.png" class="logo">
+            <ul> 
+                <li><a href="#">reservation</a></li>
+                <li><a href="#">duré</a></li>
+                <li><a href="#">destination</a></li>
+                <li><a href="#">hotel</a></li>
+                <li><a href="#">transport</a></li>
+            </ul>
+            <img src="images.png" class="user-pic" onclick="togglemenu()">
+
+            <div class="sub-menu-wrap" id="sub-menu-wrap">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="images.png">
+                        <h1>Nom d'utilisateur</h1>
+                    </div>
+                    <hr>
+                    <a href="#" class="sub-menu-link">
+                        <img src="images 3.png">
+                        <p>modifier profile</p>
+                        <span></span>
+                    </a>
+
+                    <a href="#" class="sub-menu-link">
+                        <img src="images.png">
+                        <p>parametres</p>
+                        <span></span>
+                    </a>             
+
+                    <a href="#" class="sub-menu-link">
+                        <img src="image2.png">
+                        <p>aider</p>
+                        <span></span>
+                    </a>    
+
+                    <a href="#" class="sub-menu-link">
+                        <img src="images (1).jfif">
+                        <p>déconnecter</p>
+                        <span></span>
+                </div>
+            </div>
+        </nav>
+       </div>
+       <script>
+        let submenu = document.getElementById("sub-menu-wrap");
+        function togglemenu(){
+            submenu.classList.toggle("open-menu");
+        }
+       </script> 
+    </body>
+</html>
+
